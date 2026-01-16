@@ -1,4 +1,7 @@
+// Fase 2 Base de datos
+
 const baseDeDatos = [];
+const INDICE_LISTAR_SOSPECHOSO = 0;
 
 const sospechoso1 = {
   nombre: "T-800",
@@ -26,7 +29,7 @@ const sospechoso2 = {
 
 const sospechoso3 = {
   nombre: "Sarah Connor",
-  codigo: "   NORMAL_RESISTANCE   ",
+  codigo: "   NORMAL_RESISTANCE_103  ",
   nivelPeligrosidad: 7,
   capturado: true,
   delitos: [
@@ -35,3 +38,36 @@ const sospechoso3 = {
     "Fuga de centro psiquiátrico"
   ]
 };
+
+baseDeDatos.push(sospechoso1);
+baseDeDatos.push(sospechoso2);
+baseDeDatos.push(sospechoso3);
+
+// Fase 3 Herramientas de gestion
+
+// creamos una funcion para registrar nuevos sospechosos y lo agregamos al arreglo
+
+function registrarSospechoso (nombre, codigo, nivelPeligrosidad, capturado, delitos){
+    const nuevoSospechoso = {
+        nombre : nombre,
+        codigo : codigo,
+        nivelPeligrosidad : nivelPeligrosidad,
+        capturado : capturado,
+        delitos : delitos,
+    };
+
+    baseDeDatos.push(nuevoSospechoso);
+
+    console.log(`Sospechoso ${nombre} ha sigo agregado correctamente`);
+    
+}
+
+// listar sospechosos (recorremos el arreglo baseDeDatos)
+
+function listarSospechosos (){
+    for (const INDICE_LISTAR_SOSPECHOSO of baseDeDatos) {
+        console.log(`El sospechoso ${INDICE_LISTAR_SOSPECHOSO.nombre} tiene un nivel de peligrosidad de ${INDICE_LISTAR_SOSPECHOSO.nivelPeligrosidad}`);
+        
+    }
+}
+
