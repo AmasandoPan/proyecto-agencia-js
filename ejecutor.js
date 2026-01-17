@@ -4,15 +4,14 @@ console.log("Sistema Iniciado...");
 registrarSospechoso("John Connor", "LEADER_001", 5, false, [
   "Hackeo de cajeros",
 ]);
+registrarSospechoso("Viajero del Tiempo", "SECRET_400", 10, false, [
+  "Viajes ilegales en el tiempo",
+]);
 
-// fase 5 reporte final
+console.log(analizarCodigo(sospechoso1));
+console.log(analizarCodigo(sospechoso2));
+console.log(analizarCodigo(sospechoso3));
 
-function generarReporteSeguridad() {
-  // listado general
-  console.log("--- INFORME DE INTELIGENCIA ACTUALIZADO ---");
-  console.log("--- NOMBRE".padEnd(20) + "| " + "PELIGROSIDAD ---");
-  console.log("-".repeat(50));// Linea separadora
-  listarSospechosos();
-}
+//reporte final
 
 generarReporteSeguridad();
