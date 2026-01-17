@@ -1,4 +1,4 @@
-// Fase 2 Base de datos
+// Fase 2 Base de Datos
 
 const baseDeDatos = [];
 const INDICE_LISTAR_SOSPECHOSO = 0;
@@ -43,7 +43,7 @@ baseDeDatos.push(sospechoso1);
 baseDeDatos.push(sospechoso2);
 baseDeDatos.push(sospechoso3);
 
-// Fase 3 Herramientas de gestion
+// Fase 3 Herramientas de Gestión
 
 // creamos una funcion para registrar nuevos sospechosos y lo agregamos al arreglo
 
@@ -71,3 +71,24 @@ function listarSospechosos (){
     }
 }
 
+// Fase 4 El Decodificador
+
+function analizarCodigo(sospechoso) {
+    const codigoSinEspacios = sospechoso.codigo.trim();
+
+    if (!codigoSinEspacios.startsWith("SECRET")) {
+        return "Codigo Limpio"
+    }
+
+    const codigoExtraido = codigoSinEspacios.substring(7);
+
+    if (codigoExtraido.includes("Peligro")) {
+        return "Alta Prioridad";
+    }
+
+    return "Codigo Limpio";
+}
+
+console.log(analizarCodigo(sospechoso1));
+console.log(analizarCodigo(sospechoso2));
+console.log(analizarCodigo(sospechoso3));
