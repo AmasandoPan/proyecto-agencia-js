@@ -60,14 +60,14 @@ function registrarSospechoso (nombre, codigo, nivelPeligrosidad, capturado, deli
 
     console.log(`Sospechoso ${nombre} ha sigo agregado correctamente`);
     
-}
+};
 
 // listar sospechosos (recorremos el arreglo baseDeDatos)
 
 function listarSospechosos (){
     for (const INDICE_LISTAR_SOSPECHOSO of baseDeDatos) {
-        console.log(`El sospechoso ${INDICE_LISTAR_SOSPECHOSO.nombre} tiene un nivel de peligrosidad de ${INDICE_LISTAR_SOSPECHOSO.nivelPeligrosidad}`);
+        console.log(`${INDICE_LISTAR_SOSPECHOSO.nombre}`.padEnd(20) + "| "+ `${INDICE_LISTAR_SOSPECHOSO.nivelPeligrosidad}`);
         
-    }
-}
+    };
+};
 
